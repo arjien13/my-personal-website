@@ -397,11 +397,13 @@ body {
 }
 
 #submit-comment {
+  margin-top: -2vh;
+  margin-left: 1.6vw; 
   background-color: #585c58;
   color: #fff;
-  padding: 2vh 4vw;
   border: none;
   border-radius: 1vh;
+  padding: 1vh 2vw; 
   cursor: pointer;
 }
 
