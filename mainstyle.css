@@ -513,13 +513,14 @@ body {
   opacity: 0;
   transition: opacity 0.3s;
 }
+.social-media img:hover { 
+  transform: scale(1.2); 
+}
 
 .social-media a:hover .tooltip {
   opacity: 1;
 }
-.social-media img:hover { 
-  transform: scale(1.2); 
-}
+
 
 /* soc. med. alert*/
 
