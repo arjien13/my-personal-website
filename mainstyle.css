@@ -1,6 +1,6 @@
 
 /****** GLOBAL STYLES ******/
-@media only screen and (min-width: 480px) {
+
 * {
   margin: 0;
   padding: 0;
@@ -600,4 +600,4 @@ body {
   pointer-events: none;
   white-space: nowrap;
 }
-}
+
