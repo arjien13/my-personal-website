@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BoyLabo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=BC+Minimal&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="ForDesktop.css">
+  <link rel="stylesheet" href="mainstyle.css">
+</head>
+<body>
+  
+  <div class="main">
+    <div class="header"> </div>
+
+      <div class="banner"></div>
+      
+      <div class="menu">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a>
+            <ul class="dropdown">
+              <li><a href="#">My Education</a></li>
+              <li><a href="#">My Hobby</a></li>
+              <li><a href="#">My Skills</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Job Experience</a>
+            <ul class="dropdown">
+              <li><a href="#">Graphic Specialist</a></li>
+              <li><a href="#">DTP Specialist</a></li>
+              <li><a href="#">Remotasker</a></li>
+              <li><a href="#">Piggery Owner</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Gallery</a>
+            <ul class="dropdown">
+              <li id="photos-link"><a href="photos.html">Photos</a></li>
+              <li id="videos-link"><a href="video.html">Videos</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Contact</a>
+            <ul class="dropdown">
+              <li><a href="#">Cell No.</a></li>
+              <li><a href="#">Tel. No.</a></li>
+              <li><a href="#">Soc. Med.</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Basic Learning</a>
+            <ul class="dropdown">
+              <li><a href="#">About HTML</a></li>
+              <li><a href="#">About CSS</a></li>
+              <li><a href="#">About JAVASCRIPT</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  
+  <img class="thoughts" src="dragons/thoughts.JPG" />
+  <div class="image-hover">
+    <img src="dragons/ninja.jpg" alt="Image" class="image">
+    <span class="ninja-thoughts">"Hey! Mission update: This webpage still in development. New intel coming soon. I'm gathering more information to bring you a webpage that's truly mission-critical. Stay alert."
+    </span>
+  </div>
+  <div class="pointer-container">
+    <img class="pointer" src="pointer2.png" />
+    <div class="ninja-text">Point the Ninja</div>
+    <img class="pointer1" src="pointer1.png" />
+    <div class="dragon-text">Wake the Dragon!</div>
+    <div class="shuriken-container">
+    <img class="pointer2" src="pointer3.png" />
+    <div class="shuriken-text">Comment Here!</div>
+    </div>
+  </div>
+
+    <div class="mouse-message">
+      <span>"Mouse Here!"</span>
+      
+      <div class="message">
+        "Welcome to my personal website. This online space showcases my journey as a self-taught web designer, featuring my projects, experiences, and growth in the field. I'm excited to share my story with you and look forward to your feedback."
+      </div>
+    </div>
+    <div class="dragon-image">
+      <img src="dragons/dragon1.jpg" alt="Dragon Image">
+      <p class="dragon-message">"Unleashing its fury on the twenty-sixth dawn of May, in the languid late spring of the radiant eighties, the beast awakened, its mighty roar thundering through the annals of time, echoing across the expanse of a bygone era."</p>
+    </div>
+    
+
+    <div class="Shuriken-image">
+      <img src="dragons/shur.JPG" alt="Shuriken Image">
+     </div>
+
+     
+     
+     <div class="comment-section">
+      <span class="close-button">&times;</span>
+      <h2>Comments</h2>
+      <form id="comment-form">
+        <input type="text" id="name" placeholder="Name" style="width: 100%; height: 30px;">
+        <textarea id="comment" placeholder="Write a comment..." style="width: 100%; height: 50px;"></textarea>
+        <button id="submit-comment" style="position: relative; left: 7.5vw; width: 80px; height: 30px; font-size: 14px; display: flex; justify-content: center; align-items: center;">Submit</button>
+      </form>
+      <h5 style="position: absolute; right: 10px; bottom: 10px; font-size: 10px;">Scroll for comments</h5>
+      <div id="comments-container"></div>
+    </div>
+   
+    <!-- social media -->
+    <div class="social-media">
+      <a href="https://www.facebook.com/arjie.nunag2006" class="facebook">
+        <img src="link icon/fb.jpg" alt="Facebook">
+        <span class="tooltip">Facebook</span>
+      </a>
+      <div class="instagram">
+        <img src="link icon/insta.jpg" alt="Instagram" onclick="showAlert(this, 'Joke, I dont have an Instagram account!')">
+        <span class="tooltip">Instagram</span>
+        <span class="alert-message"></span>
+      </div>
+      <div class="linkedin">
+        <img src="link icon/linkedin-logo-linkedin-symbol-linkedin-icon-free-free-vector.jpg" alt="LinkedIn" onclick="showAlert(this, 'Joke, I dont have a LinkedIn account!')">
+        <span class="tooltip">LinkedIn</span>
+        <span class="alert-message"></span>
+      </div>
+      <div class="twitter">
+        <img src="link icon/twit.jpg" alt="Twitter" onclick="showAlert(this, 'Joke, I dont have a Twitter account!')">
+        <span class="tooltip">Twitter</span>
+        <span class="alert-message"></span>
+      </div>
+      <div class="tiktok">
+        <img src="link icon/tiktok.jpg" alt="Tiktok" onclick="showAlert(this, 'Joke, I dont have a Tiktok account!')">
+        <span class="tooltip">YouTube</span>
+        <span class="alert-message"></span>
+      </div>
+      <div class="youtube">
+        <img src="link icon/yt.jpg" alt="YouTube" onclick="showAlert(this, 'Joke, I dont have a YouTube account!')">
+        <span class="tooltip">YouTube</span>
+        <span class="alert-message"></span>
+      </div>
+    </div>
+    <!-- social media -->
+    
+
+  <script>
+    document.getElementById("photos-link").addEventListener("mouseover", function() {
+      console.log("Hovering over Photos link");
+    });
+
+const imageHover = document.querySelector('.image-hover');
+const thoughtsImage = document.querySelector('.thoughts');
+
+imageHover.addEventListener('mouseover', () => {
+  thoughtsImage.style.opacity = 1;
+});
+
+imageHover.addEventListener('mouseout', () => {
+  thoughtsImage.style.opacity = 0;
+});
+/*--------------------------------------------------------------------------------------*/
+
+console.log('Script is executing');
+
+const commentForm = document.getElementById('comment-form');
+const commentsContainer = document.getElementById('comments-container');
+
+let commentIndex = 0;
+
+commentForm.addEventListener('submit', (e) => {
+  e.preventDefault();
+  const name = document.getElementById('name').value;
+  const comment = document.getElementById('comment').value;
+
+  console.log('Form submitted');
+  console.log(`Name: ${name}, Comment: ${comment}`);
+
+  const commentHTML = `
+    <div class="comment" data-index="${commentIndex}">
+      <span class="comment-name">${name}</span>
+      <p class="comment-text">${comment}</p>
+      <button class="delete-button" style="position: absolute; right: 0;">Delete</button>
+    </div>
+  `;
+
+  commentsContainer.insertAdjacentHTML('beforeend', commentHTML);
+
+  console.log('Comment appended');
+
+  // Clear the form fields
+  document.getElementById('name').value = '';
+  document.getElementById('comment').value = '';
+
+  commentIndex++;
+});
+
+// Add event listener to delete button
+document.addEventListener('click', (e) => {
+  if (e.target.classList.contains('delete-button')) {
+    const commentElement = e.target.parentElement;
+    commentElement.remove();
+  }
+});
+
+
+/*--------------------------------------------------------------------------------------*/
+// Get the Shuriken image and comment section elements
+var shurikenImage = document.querySelector('.Shuriken-image');
+var commentSection = document.querySelector('.comment-section');
+var closeButton = document.querySelector('.close-button'); // Add this line
+
+// Add an event listener to the Shuriken image
+shurikenImage.addEventListener('click', function() {
+  // Toggle the visibility of the comment section
+  commentSection.style.display = commentSection.style.display === 'block' ? 'none' : 'block';
+});
+
+// Add an event listener to the close button
+closeButton.addEventListener('click', function() { // Add this event listener
+  commentSection.style.display = 'none';
+});
+/*--------------------------------------------------------------------------------------*/
+function showAlert(element, message) {
+  const alertMessage = element.nextElementSibling.nextElementSibling;
+  alertMessage.innerText = message;
+  alertMessage.style.opacity = 1;
+  setTimeout(() => {
+    alertMessage.style.opacity = 0;
+  }, 2000);
+}
+/*--------------------------------------------------------------------------------------*/
+</script>
+
+
+
+</body>
+</html>
