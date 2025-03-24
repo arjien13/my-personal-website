@@ -12,16 +12,13 @@
 
 /****** BODY STYLES *****/
 body {
-  background-image: linear-gradient(to right, #808080, #666666);
-  background-size: 100% 500vh, cover; 
+  background-image: url('dragons/kitty.jpg');
+  background-size: 100% 100%;
   background-position: center;
-  overflow: hidden;
   background-repeat: no-repeat;
-  width: 100vw;
-  margin: 0 auto;
-  max-width: 100%;
-  overflow-x: hidden;
-  
+  background-attachment: fixed;
+  margin: 0;
+  padding: 0;
 }
 /****** BODY STYLES *****/
 
