@@ -179,9 +179,6 @@ console.log('Script is executing');
 const commentForm = document.getElementById('comment-form');
 const commentsContainer = document.getElementById('comments-container');
 
-// Initialize Firestore
-const db = firebase.firestore();
-
 let commentIndex = 0;
 
 commentForm.addEventListener('submit', (e) => {
@@ -192,17 +189,17 @@ commentForm.addEventListener('submit', (e) => {
   console.log('Form submitted');
   console.log(`Name: ${name}, Comment: ${comment}`);
 
-  // Add comment to Firestore
-  db.collection('comments').add({
-    name: name,
-    comment: comment
-  })
-  .then((docRef) => {
-    console.log('Comment added:', docRef.id);
-  })
-  .catch((error) => {
-    console.error('Error adding comment:', error);
-  });
+  const commentHTML = `
+    <div class="comment" data-index="${commentIndex}">
+      <span class="comment-name">${name}</span>
+      <p class="comment-text">${comment}</p>
+      <button class="delete-button" style="position: absolute; right: 0;">Delete</button>
+    </div>
+  `;
+
+  commentsContainer.insertAdjacentHTML('beforeend', commentHTML);
+
+  console.log('Comment appended');
 
   // Clear the form fields
   document.getElementById('name').value = '';
@@ -211,36 +208,14 @@ commentForm.addEventListener('submit', (e) => {
   commentIndex++;
 });
 
-// Retrieve comments from Firestore and display them
-db.collection('comments').onSnapshot((querySnapshot) => {
-  commentsContainer.innerHTML = '';
-  querySnapshot.forEach((doc) => {
-    const commentData = doc.data();
-    const commentHTML = `
-      <div class="comment" data-index="${commentIndex}">
-        <span class="comment-name">${commentData.name}</span>
-        <p class="comment-text">${commentData.comment}</p>
-        <button class="delete-button" style="position: absolute; right: 0;">Delete</button>
-      </div>
-    `;
-    commentsContainer.insertAdjacentHTML('beforeend', commentHTML);
-  });
-});
-
 // Add event listener to delete button
 document.addEventListener('click', (e) => {
   if (e.target.classList.contains('delete-button')) {
     const commentElement = e.target.parentElement;
-    const commentId = commentElement.getAttribute('data-id');
-    db.collection('comments').doc(commentId).delete()
-    .then(() => {
-      console.log('Comment deleted');
-    })
-    .catch((error) => {
-      console.error('Error deleting comment:', error);
-    });
+    commentElement.remove();
   }
 });
+
 /*---------------------Comment Function----------------------------*/
 
 
