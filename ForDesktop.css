@@ -30,10 +30,11 @@
     position: absolute;
     width: 2.5vw;
     height: auto;
-    top: 20vh;
+    top: calc(26vh - 5vh);
     left: 91vw;
     mix-blend-mode: multiply;
   }
+  
   
   .dragon-text {
     position: absolute;
