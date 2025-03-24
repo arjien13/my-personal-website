@@ -626,9 +626,10 @@ body {
   border: none;
   border-radius: 0.2vw;
   cursor: pointer;
-  line-height: 2vh; /* add this line */
+  line-height: 2vh; 
   position: relative;
-  top: -.2vh; /* add this line */
+  top: -.2vh; 
+  font-size: 1vh; 
 }
 
 #search-button:hover {
