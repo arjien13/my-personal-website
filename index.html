@@ -10,6 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=BC+Minimal&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="ForDesktop.css">
   <link rel="stylesheet" href="mainstyle.css">
+  <script src="https://www.gstatic.com/firebasejs/9.1.3/firebase-database.js"></script>
 </head>
 <body>
   
@@ -106,11 +107,8 @@
       </form>
       <h5 style="position: absolute; right: 10px; bottom: 10px; font-size: 10px;">Scroll for comments</h5>
       <div id="comments-container"></div>
+      
     </div>
-
-  <div>
-    <iframe src="https://github.com/arjien13/my-personal-website/issues/1#issue-2961499619" width="100%" height="500" frameborder="0" scrolling="yes"></iframe>
-  </div>
    
     <!-- social media -->
     <div class="social-media">
@@ -158,6 +156,33 @@
     
 
   <script>
+
+const repoOwner = 'arjien13';
+    const repoName = 'my-personal-website';
+    const issueNumber = 1;
+    const token = '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';
+
+    const apiUrl = `https://api.github.com/repos/${repoOwner}/${repoName}/issues/${issueNumber}/comments`;
+
+    fetch(apiUrl, {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    })
+    .then(response => response.json())
+    .then(data => {
+      const commentsContainer = document.getElementById('comments-container');
+      data.forEach(comment => {
+        const commentElement = document.createElement('div');
+        commentElement.innerHTML = `
+          <h4>${comment.user.login}</h4>
+          <p>${comment.body}</p>
+        `;
+        commentsContainer.appendChild(commentElement);
+      });
+    })
+    .catch(error => console.error(error));
+
 
 /*---------------------Ninja Thinking Function---------------------*/
     document.getElementById("photos-link").addEventListener("mouseover", function() {
@@ -219,7 +244,6 @@ document.addEventListener('click', (e) => {
     commentElement.remove();
   }
 });
-
 /*---------------------Comment Function----------------------------*/
 
 
